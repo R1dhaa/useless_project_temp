@@ -107,9 +107,22 @@ while True:
         pil_image = Image.fromarray(canvas)
         print(f"[INFO] Generating AI image with prompt: {prompt}")
 
-        result = pipe(prompt, image=pil_image).images[0]
-        ai_image = cv2.cvtColor(np.array(result), cv2.COLOR_RGB2BGR)
-        ai_image = cv2.resize(ai_image, (640, 480))
+        # Resize input image to 384x384 (good balance quality & speed)
+        small_pil = pil_image.resize((384, 384))
+
+        with torch.no_grad():
+            with torch.cuda.amp.autocast():
+                result = pipe(
+                    prompt,
+                    image=small_pil,
+                    num_inference_steps=25,
+                    height=384,
+                    width=384,
+                    controlnet_conditioning_scale=1.0  # default, can try 0.8 for speedup
+                ).images[0]
+
+        # Resize result back to display size
+        ai_image = cv2.cvtColor(np.array(result.resize((640, 480))), cv2.COLOR_RGB2BGR)
 
     elif key == ord('q'):
         break
