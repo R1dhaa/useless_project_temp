@@ -5,13 +5,12 @@
 
 
 ## Basic Details
-### Team Name: [SERENDIPITY]
+### Team Name: SERENDIPITY
 
 
 ### Team Members
-- Team Lead: [Name] - [College]
-- Member 2: [Name] - [College]
-- Member 3: [Name] - [College]
+- Member 1: Fatma Ridha - SCMS School of Engineering and Technology
+- Member 3: Gayathri Sudheesh - SCMS School of Engineering and Technology
 
 ### Project Description
 [2-3 lines about what your project does]
