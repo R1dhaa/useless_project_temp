@@ -99,14 +99,8 @@ while True:
         ai_image.fill(0)
 
     elif key == ord('g'):
-        print("[INFO] Classifying sketch with CLIP...")
-        detected_label = classify_sketch_with_clip(canvas)
-        print(f"[INFO] Detected: {detected_label}")
-
-        prompt = f"A stunning, lifelike digital painting of a {detected_label}, ultra-realistic details, sharp focus, natural shadows, and vibrant colors"
-        pil_image = Image.fromarray(canvas)
-        print(f"[INFO] Generating AI image with prompt: {prompt}")
-
+        print("[INFO] Generating AI image...")
+        pil_image = Image.fromarray(canvas)  # Use the drawn canvas directly
         result = pipe(prompt, image=pil_image).images[0]
         ai_image = cv2.cvtColor(np.array(result), cv2.COLOR_RGB2BGR)
         ai_image = cv2.resize(ai_image, (640, 480))

@@ -1,7 +1,7 @@
 <img width="3188" height="1202" alt="frame (3)" src="https://github.com/user-attachments/assets/517ad8e9-ad22-457d-9538-a9e62d137cd7" />
 
 
-# Air2Art 🖌 🎯
+# Air2Art  🎯
 
 
 ## Basic Details
@@ -19,28 +19,41 @@ Air2Art lets you draw invisible sketches in mid-air with your finger — then in
 Why draw on paper or screens when you can just wave your hand and draw in the air? The problem is, there’s no easy way to turn those air drawings into real art… yet!
 
 ### The Solution (that nobody asked for)
-[How are you solving it? Keep it fun!]
+You draw in the air, and the AI turns your sketch into a real picture—all using your webcam and some smart code. No mess, no paper, just fun!
 
 ## Technical Details
 ### Technologies/Components Used
 For Software:
-- [Languages used]
-- [Frameworks used]
-- [Libraries used]
-- [Tools used]
+- Language used: Python 3.x
+- Libraries used:
+    - OpenCV - for webcam capture, image processing and GUI display
+    - MediaPipe - for real time hand landmark detection and tracking
+    - OpenAI CLIP - for zero-shot image classification
+- Tools used:
+    - Python package manager(pip) for installating dependencies
+    - Hugging Face CLI for authentication and model downloading
+    - Webcam for capturing live video
 
 For Hardware:
-- [List main components]
-- [List specifications]
-- [List tools required]
+- Main components
+    -NVIDIA GPU(CUDA-capable) for fast Stable Diffusion and CLIP inference 
+  
 
 ### Implementation
 For Software:
+- Hand Tracking
+- Sketch classification
+- Image generator
+- User interface
+  
 # Installation
-[commands]
+pip install opencv-python mediapipe torch torchvision diffusers transformers accelerate pillow ftfy regex tqdm
+
+pip install git+https://github.com/openai/CLIP.git  # For CLIP model
 
 # Run
-[commands]
+python main.py
+
 
 ### Project Documentation
 For Software:
@@ -75,13 +88,11 @@ For Software:
 [Add your demo video link here]
 *Explain what the video demonstrates*
 
-# Additional Demos
-[Add any extra demo materials/links]
 
 ## Team Contributions
 - Fatma Ridha: [Specific contributions]
 - Gayathri Sudheesh: [Specific contributions]
-- [Name 3]: [Specific contributions]
+  
 
 ---
 Made with ❤️ at TinkerHub Useless Projects 
