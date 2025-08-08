@@ -1,0 +1,10 @@
+opencv-python
+mediapipe
+torch
+Pillow
+diffusers
+transformers
+ftfy
+regex
+tqdm
+clip-anytorch
