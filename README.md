@@ -1,7 +1,7 @@
 <img width="3188" height="1202" alt="frame (3)" src="https://github.com/user-attachments/assets/517ad8e9-ad22-457d-9538-a9e62d137cd7" />
 
 
-# [Project Name] 🎯
+# Air2Art 🖌 🎯
 
 
 ## Basic Details
@@ -10,13 +10,13 @@
 
 ### Team Members
 - Member 1: Fatma Ridha - SCMS School of Engineering and Technology
-- Member 3: Gayathri Sudheesh - SCMS School of Engineering and Technology
+- Member 2: Gayathri Sudheesh - SCMS School of Engineering and Technology
 
 ### Project Description
-[2-3 lines about what your project does]
+Air2Art lets you draw invisible sketches in mid-air with your finger — then instantly turns your airy doodles into stunning AI-generated artworks. It’s like magic painting, no canvas required!
 
 ### The Problem (that doesn't exist)
-[What ridiculous problem are you solving?]
+Why draw on paper or screens when you can just wave your hand and draw in the air? The problem is, there’s no easy way to turn those air drawings into real art… yet!
 
 ### The Solution (that nobody asked for)
 [How are you solving it? Keep it fun!]
