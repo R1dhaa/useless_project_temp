@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Air2Art</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body, html {
+      height: 100%;
+      width: 100%;
+    }
+
+    .hero {
+      height: 100vh;
+      width: 100vw;
+      /* background-image: url("imgs/img.jpg"); */
+      background-size: cover;            /* Ensures full coverage */
+      background-position: center center;/* Centered horizontally and vertically */
+      
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      /* position: relative; */
+      color: #a85c5c;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+    }
+
+    .hero h1 {
+      font-size: 3em;
+      letter-spacing: 2px;
+      text-align: center;
+      margin-bottom: 40px;
+      background: rgba(0, 0, 0, 0.4);
+      padding: 15px 30px;
+      border-radius: 12px;
+    }
+
+    .start-button {
+      position: absolute;
+      bottom: 60px;
+      background-color: #ffffff;
+      color: #160101;
+      border: none;
+      padding: 15px 30px;
+      font-size: 1.1em;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      transition: background 0.3s ease;
+      text-transform: uppercase;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .start-button:hover {
+      background-color: #f0f0f0;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2em;
+        padding: 15px 25px;
+      }
+
+      .start-button {
+        padding: 12px 24px;
+        font-size: 1em;
+      }
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="hero">
+    <h1>Air2Art</h1>
+    <!-- <a href="main.py"> -->
+      <button class="start-button">Start</button>
+    </a>
+  </div>
+
+</body>
+</html>
