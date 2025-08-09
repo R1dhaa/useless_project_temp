@@ -59,39 +59,40 @@ python main.py
 For Software:
 
 # Screenshots (Add at least 3)
-![Screenshot1](Add screenshot 1 here with proper name)
-*Add caption explaining what this shows*
+![img1](https://github.com/user-attachments/assets/63f49829-91d8-4d62-b1a0-cf51d66c4431)
 
-![Screenshot2](Add screenshot 2 here with proper name)
-*Add caption explaining what this shows*
+The image shows a hand-tracking application called "Air2Art" that uses a skeletal model of a hand to interpret gestures for drawing and generating art.
 
-![Screenshot3](Add screenshot 3 here with proper name)
-*Add caption explaining what this shows*
+![img2](https://github.com/user-attachments/assets/06899d15-be3e-4213-be6c-5d924a8caadf)
+
+This image shows a program's console output where an AI model classified a user's sketch as a "boat" and is now using a detailed text prompt to generate a digital painting of a boat.
+
+![img3](https://github.com/user-attachments/assets/88662852-5a6e-42f1-a5df-15a208c8cabd)
+
+This image shows the "Air2Art" application interface, displaying a user's simple line drawing of a boat on the left and the detailed, AI-generated digital painting that resulted from it on the right.
 
 # Diagrams
-![Workflow](Add your workflow/architecture diagram here)
-*Add caption explaining your workflow*
+<img width="673" height="717" alt="flowchart" src="https://github.com/user-attachments/assets/f1a0cd8c-933f-4335-a867-779fb075be12" />
+
+Flowchart
 
 
 # Build Photos
-![Components](Add photo of your components here)
-*List out all components shown*
 
-![Build](Add photos of build process here)
-*Explain the build steps*
+![img3](https://github.com/user-attachments/assets/c5e67387-f930-4fd7-9e26-50a35b0c4e55)
 
-![Final](Add photo of final product here)
-*Explain the final build*
+The final build of the "Air2Art" application is a gesture-based drawing tool that uses AI to classify a user's simple sketch and then generates a corresponding detailed, high-quality digital painting.
 
 ### Project Demo
 # Video
-[Add your demo video link here]
-*Explain what the video demonstrates*
+https://drive.google.com/file/d/1SqwFnhdCBGQWCOdJkRJ_2F5GGnLyXyLV/view?usp=sharing
+
+The video showcases an "Air2Art" application where a user draws a simple boat in the air with their hand. The software's AI then classifies the drawing and generates a high-quality, realistic digital painting of a boat, presenting the transformation from a basic sketch to a refined piece of art.
 
 
 ## Team Contributions
-- Fatma Ridha: [Specific contributions]
-- Gayathri Sudheesh: [Specific contributions]
+- Fatma Ridha: Contributed to ideation, made commits, contributed to coding, fixed bugs.
+- Gayathri Sudheesh: Made commits, contributed to coding, and wrote documentation.
   
 
 ---
