@@ -4,17 +4,17 @@ import numpy as np
 import torch
 from PIL import Image
 from diffusers import StableDiffusionControlNetPipeline, ControlNetModel
-import clip  # pip install ftfy regex tqdm transformers torch torchvision
+import clip  
 
-# --------- Device ---------
+
 device = "cuda" if torch.cuda.is_available() else "cpu"
 print(f"[INFO] Using device: {device}")
 
-# --------- Load CLIP model ---------
+
 print("[INFO] Loading CLIP model...")
 clip_model, clip_preprocess = clip.load("ViT-B/32", device=device)
 
-# --------- Candidate categories for CLIP zero-shot ---------
+
 CATEGORIES = [
     "cat", "car", "house", "airplane", "flower", "dog", "tree", "bicycle", "person",
     "bird", "boat", "chair", "clock", "dog", "elephant", "guitar", "hat", "keyboard"
@@ -37,7 +37,7 @@ def classify_sketch_with_clip(img_np):
         best_idx = similarity.argmax().item()
         return CATEGORIES[best_idx]
 
-# --------- Load Stable Diffusion + ControlNet ---------
+
 print("[INFO] Loading Stable Diffusion + ControlNet models...")
 controlnet = ControlNetModel.from_pretrained(
     "lllyasviel/sd-controlnet-scribble",
@@ -49,18 +49,18 @@ pipe = StableDiffusionControlNetPipeline.from_pretrained(
     torch_dtype=torch.float16 if device=="cuda" else torch.float32
 ).to(device)
 
-# --------- Mediapipe hand tracking ---------
+
 mp_hands = mp.solutions.hands
 hands = mp_hands.Hands(min_detection_confidence=0.7, min_tracking_confidence=0.7)
 mp_draw = mp.solutions.drawing_utils
 
-# --------- Canvas & states ---------
+
 canvas = np.zeros((480, 640, 3), dtype=np.uint8)
 drawing = False
 last_pos = None
 ai_image = np.zeros((480, 640, 3), dtype=np.uint8)
 
-# --------- Webcam loop ---------
+
 cap = cv2.VideoCapture(0)
 while True:
     ret, frame = cap.read()
@@ -107,7 +107,7 @@ while True:
         pil_image = Image.fromarray(canvas)
         print(f"[INFO] Generating AI image with prompt: {prompt}")
 
-        # Resize input image to 384x384 (good balance quality & speed)
+        
         small_pil = pil_image.resize((384, 384))
 
         with torch.no_grad():
@@ -118,10 +118,10 @@ while True:
                     num_inference_steps=25,
                     height=384,
                     width=384,
-                    controlnet_conditioning_scale=1.0  # default, can try 0.8 for speedup
+                    controlnet_conditioning_scale=1.0  
                 ).images[0]
 
-        # Resize result back to display size
+        
         ai_image = cv2.cvtColor(np.array(result.resize((640, 480))), cv2.COLOR_RGB2BGR)
 
     elif key == ord('q'):
